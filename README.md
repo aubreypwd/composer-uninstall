@@ -5,6 +5,6 @@ This plugin, once installed, adds a `composer uninstall` command that will unins
 ## Installation
 
 ```
-composer config repositories.composer-uninstall git@github.com:aubreypwd/composer-uninstall.git
-composer require aubreypwd/composer-uninstall
+composer global config repositories.composer-uninstall git git@github.com:aubreypwd/composer-uninstall.git
+composer global require aubreypwd/composer-uninstall:dev-master@dev
 ```
