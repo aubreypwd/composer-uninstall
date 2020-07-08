@@ -8,7 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 use Naucon\File\File;
 
-class Command extends BaseCommand {
+class Uninstall extends BaseCommand {
 	protected function configure() {
 		$this->setName( 'uninstall' );
 	}
