@@ -9,13 +9,10 @@ use Composer\EventDispatcher\EventSubscriberInterface;
 
 class Plugin implements PluginInterface, EventSubscriberInterface
 {
-    public function activate(Composer $composer, IOInterface $io)
-    {
-    }
-
     public function getCapabilities()
     {
         return array(
             'Composer\Plugin\Capability\CommandProvider' => 'aubreypwd\Composer\Uninstall\CommandProvider',
         );
     }
+}

@@ -5,7 +5,7 @@
       "composer-plugin-api": "^1.1"
     },
     "extra": {
-      "class": "aubreypwd\\Composer\\Uninstall\\CommandProvider"
+      "class": "aubreypwd\\Composer\\Uninstall\\Plugin"
     },
     "autoload":{
         "psr-4":{
