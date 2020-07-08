@@ -15,32 +15,3 @@
  * @author          Aubrey Portwood <aubrey@webdevstudios.com>
  */
 
-global $output;
-
-$paths = explode( "\n", shell_exec( 'composer show --path' ) );
-$packages = explode( "\n", shell_exec( 'composer show --name-only') );
-
-if ( ! is_array( $paths ) || ! is_array( $packages ) ) {
-	die( "Nothing to uninstall.\n" );
-}
-
-foreach ( $paths as $k => $p ) {
-	foreach ( $packages as $package ) {
-		$paths[ $k ] = preg_replace( "/^" . str_replace( '/', '\/', $package ) . "\s/", '', $paths[ $k ] );
-	}
-}
-
-foreach ( array_unique( $paths ) as $path ) {
-	$path = '/' . trim( $path, '/' );
-
-	if ( empty( $path ) ) {
-		continue;
-	}
-
-	if ( ! file_exists( $path ) || ! is_dir( $path ) ) {
-		echo "Skipping {$path}...\n";
-		continue;
-	}
-
-	echo "Removing {$path}...\n";
-}

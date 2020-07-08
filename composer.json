@@ -2,14 +2,15 @@
   "name": "aubreypwd/composer-uninstall",
   "type": "composer-plugin",
   "require": {
-    "composer-plugin-api": "^1.1"
+    "composer-plugin-api": "^1.1",
+    "naucon/file": "^1.0"
   },
   "extra": {
     "class": "aubreypwd\\Composer\\Uninstall\\Plugin"
   },
   "autoload":{
       "psr-4":{
-          "aubreypwd\\Composer\\Uninstall\\":"src/"
+        "aubreypwd\\Composer\\Uninstall\\":"src/"
       }
   }
 }
