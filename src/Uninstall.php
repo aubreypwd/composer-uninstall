@@ -60,6 +60,10 @@ class Uninstall extends BaseCommand {
 
 			echo " - Deleting {$relative_path} for {$package}...\n";
 
+			if ( ! file_exists( $path ) ) {
+				continue;
+			}
+
 			$file = new File( $path );
 			$file->deleteAll();
 		}
