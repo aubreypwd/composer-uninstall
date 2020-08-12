@@ -58,11 +58,11 @@ class Uninstall extends BaseCommand {
 		foreach ( $remove as $package => $path ) {
 			$relative_path = trim( str_ireplace( $cwd, '', $path ), '/' );
 
-			echo " - Deleting {$relative_path} for {$package}...\n";
-
 			if ( ! file_exists( $path ) ) {
 				continue;
 			}
+
+			echo " - Deleting {$relative_path} for {$package}...\n";
 
 			$file = new File( $path );
 			$file->deleteAll();
