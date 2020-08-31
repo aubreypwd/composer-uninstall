@@ -67,6 +67,10 @@ class Uninstall extends BaseCommand {
 			$file = new File( $path );
 			@$file->deleteAll();
 
+			if ( file_exists( $path ) ) {
+				echo "  - [Error] Could not delete {$path}!";
+			}
+
 			sleep( 1 / 2 );
 		}
 	}
