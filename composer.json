@@ -3,7 +3,9 @@
   "type": "composer-plugin",
   "require": {
     "composer-plugin-api": "^1.1",
-    "naucon/file": "^1.0"
+    "naucon/file": "^1.0",
+    "composer/composer": "~1.10",
+    "php": "~7.3"
   },
   "extra": {
     "class": "aubreypwd\\Composer\\Uninstall\\Plugin"
